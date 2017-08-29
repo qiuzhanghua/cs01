@@ -26,9 +26,11 @@ spring.cloud.stream.bindings.output.destination=test
 processor01: from test to test2
 
 spring.cloud.stream.bindings.input.destination=test
+
 spring.cloud.stream.bindings.output.destination=test2
 
 
 
 sink01 : from test2 and print out.
+
 spring.cloud.stream.bindings.input.destination=test2
