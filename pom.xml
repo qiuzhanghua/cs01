@@ -10,6 +10,8 @@
 
   <modules>
     <module>source01</module>
+    <module>processor01</module>
+    <module>sink01</module>
   </modules>
 
 </project>
