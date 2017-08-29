@@ -34,3 +34,14 @@ spring.cloud.stream.bindings.output.destination=test2
 sink01 : from test2 and print out.
 
 spring.cloud.stream.bindings.input.destination=test2
+
+
+Spring Cloud Stream Apps Usage
+====
+java -jar ~/.m2/repository/org/springframework/cloud/stream/app/http-source-kafka-10/1.2.0.RELEASE/http-source-kafka-10-1.2.0.RELEASE.jar --spring.cloud.stream.bindings.output.destination=demo
+
+java -jar ~/.m2/repository/org/springframework/cloud/stream/app/log-sink-kafka-10/1.2.0.RELEASE/log-sink-kafka-10-1.2.0.RELEASE.jar --spring.cloud.stream.bindings.input.destination=demo --server.port=8081
+
+curl -X POST -d "Hello Spring Cloud Stream Apps" localhost:8080
+
+curl -X POST -d "Hello Spring Cloud Stream Apps" localhost:8080 -H "Content-Type:text/plain"
