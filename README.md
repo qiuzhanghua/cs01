@@ -45,3 +45,7 @@ java -jar ~/.m2/repository/org/springframework/cloud/stream/app/log-sink-kafka-1
 curl -X POST -d "Hello Spring Cloud Stream Apps" localhost:8080
 
 curl -X POST -d "Hello Spring Cloud Stream Apps" localhost:8080 -H "Content-Type:text/plain"
+
+
+java -jar ~/.m2/repository/org/springframework/cloud/stream/app/time-source-kafka-10/1.2.0.RELEASE/time-source-kafka-10-1.2.0.RELEASE.jar --spring.cloud.stream.bindings.output.destination=ticktock
+java -jar ~/.m2/repository/org/springframework/cloud/stream/app/log-sink-kafka-10/1.2.0.RELEASE/log-sink-kafka-10-1.2.0.RELEASE.jar       --spring.cloud.stream.bindings.input.destination=ticktock
